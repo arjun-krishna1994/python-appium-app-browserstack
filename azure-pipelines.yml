@@ -15,7 +15,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, microsofr!
+- script: echo Hello, Microsoft!
   displayName: 'Run an Appium script'
 
 - script: |
