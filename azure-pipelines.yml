@@ -1,5 +1,6 @@
 # Starter pipeline
 
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -25,3 +26,7 @@ steps:
     python3 ./android/browserstack_sample.py
     echo Done running Appium Sample Tests
   displayName: 'Run python Appium BStack Demo'
+
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'app-automate'
