@@ -7,17 +7,19 @@
 trigger:
 - master
 
-- task: BrowserStackConfig@0
-  inputs:
-    BrowserStackServiceEndPoint: 'Browserstack Demo Appium'
-
 pool:
   vmImage: ubuntu-latest
+
+
 
 steps:
 - script: echo Hello, Microsoft!
   displayName: 'Run an Appium script'
 
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'Browserstack Demo Appium'
+    
 - script: |
     pip3 install -r requirements.txt
     python ./android/browserstack_sample_local.py
