@@ -26,7 +26,3 @@ steps:
     python3 ./android/browserstack_sample.py
     echo Done running Appium Sample Tests
   displayName: 'Run python Appium BStack Demo'
-
-- task: BrowserStackResults@1
-  inputs:
-    browserstackProduct: 'app-automate'
