@@ -15,17 +15,17 @@ options = UiAutomator2Options().load_capabilities({
     "deviceName" : "Google Pixel 3",
 
     # Set URL of the application under test
-    "app" : "bs://<app-id>",
+    "app" : "bs://2c0b123313f86b2f94328490921736c14883f5cb",
 
     # Set other BrowserStack capabilities
     'bstack:options' : {
-        "projectName" : "First Python project",
-        "buildName" : "browserstack-build-1",
-        "sessionName" : "BStack first_test",
+        "projectName" : "First Azurre Python project",
+        "buildName" : "browserstack-build-azure-1",
+        "sessionName" : "BStack azure_first_test",
 
         # Set your access credentials
-        "userName" : "YOUR_USERNAME",
-        "accessKey" : "YOUR_ACCESS_KEY"
+        "userName" : os.getenv("BROWSERSTACK_USERNAME"),
+        "accessKey" : os.getenv("BROWSERSTACK_ACCESS_KEY")
     }
 })
 
