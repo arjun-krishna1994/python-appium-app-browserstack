@@ -8,6 +8,8 @@ import time
 # Options are only available since client version 2.3.0
 # If you use an older client then switch to desired_capabilities
 # instead: https://github.com/appium/python-client/pull/720
+print os.getenv("BROWSERSTACK_ACCESS_KEY")
+print os.getenv("BROWSERSTACK_USERNAME")
 options = UiAutomator2Options().load_capabilities({
     # Specify device and os_version for testing
     "platformName" : "android",
